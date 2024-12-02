@@ -8,7 +8,7 @@ interface getCoursesProps {
   categoryId?: string;
 }
 
-export type CourseWithCategoryWithPregress = Course & {
+export type CourseWithCategoryWithProgress = Course & {
   category: Category | null;
   chapters: { id: string }[];
   progress: number | null;
@@ -19,7 +19,7 @@ export async function getCourses({
   userId,
   title,
   categoryId,
-}: getCoursesProps): Promise<CourseWithCategoryWithPregress[]> {
+}: getCoursesProps): Promise<CourseWithCategoryWithProgress[]> {
   try {
     const courses = await db.course.findMany({
       where: {
@@ -50,7 +50,7 @@ export async function getCourses({
       },
     });
 
-    const courseWithProgress: CourseWithCategoryWithPregress[] =
+    const courseWithProgress: CourseWithCategoryWithProgress[] =
       await Promise.all(
         courses.map(async (course) => {
           if (course.purchase.length === 0) {
