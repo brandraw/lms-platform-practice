@@ -32,6 +32,7 @@ export const Header = async () => {
         </Link>
         {isLoggedIn && (
           <>
+            <Link href="/my-page">내 강의실</Link>
             <Link href="/profile">Profile</Link>
             <form action={UserLogout}>
               <button>Log Out</button>

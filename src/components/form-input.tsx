@@ -18,7 +18,7 @@ export const FormInput = forwardRef<
   return (
     <div className="flex flex-col gap-2">
       {label && (
-        <label htmlFor={name} className="">
+        <label htmlFor={name} className="text-xs font-semibold text-slate-600">
           {label}
         </label>
       )}

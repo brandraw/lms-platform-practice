@@ -4,6 +4,9 @@ import { db } from "@/lib/db";
 
 export default async function Home() {
   const courses = await db.course.findMany({
+    where: {
+      isPublished: true,
+    },
     orderBy: {
       createdAt: "desc",
     },

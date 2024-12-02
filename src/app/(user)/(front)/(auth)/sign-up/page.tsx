@@ -10,34 +10,38 @@ export default function SignUp() {
 
   return (
     <div className="space-y-4">
-      <h1 className="text-2xl font-semibold">회원가입!</h1>
+      <h1 className="text-xl font-semibold">회원가입</h1>
       <form action={action} className="space-y-3">
         <FormInput
+          label="이름"
           name="username"
           type="text"
           required
-          placeholder="Enter your name"
+          placeholder="홍길동"
           errors={state?.errors.username}
         />
         <FormInput
+          label="이메일"
           name="email"
           type="email"
           required
-          placeholder="Enter your Email"
+          placeholder="username@email.com"
           errors={state?.errors.email}
         />
         <FormInput
+          label="비밀번호"
           name="password"
           type="password"
           required
-          placeholder="Enter your password"
+          placeholder="********"
           errors={state?.errors.password}
         />
         <FormInput
+          label="비밀번호 확인"
           name="password_confirm"
           type="password"
           required
-          placeholder="Enter your password again"
+          placeholder="********"
           errors={state?.errors.password_confirm}
         />
         <FormButton label="무료 회원가입" />

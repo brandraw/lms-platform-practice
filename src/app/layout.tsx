@@ -31,10 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={`${pretendard.className} antialiased`}>
-        <ConfettiProvider />
+      <body className={`${pretendard.className} antialiased min-h-screen`}>
         <ToasterProvider />
         {children}
+        <ConfettiProvider />
       </body>
     </html>
   );

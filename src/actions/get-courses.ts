@@ -14,6 +14,7 @@ export type CourseWithCategoryWithPregress = Course & {
   progress: number | null;
   purchase: Purchase[];
 };
+
 export async function getCourses({
   userId,
   title,

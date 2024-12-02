@@ -38,7 +38,11 @@ export function CoursesListItem({
               {chapters.length} {chapters.length === 1 ? "Chapter" : "Chapters"}
             </div>
           </div>
-          <div>{formatPrice(price)}</div>
+          {progress === null ? (
+            <div>{formatPrice(price)}</div>
+          ) : (
+            <div>Progress</div>
+          )}
         </div>
       </div>
     </Link>
